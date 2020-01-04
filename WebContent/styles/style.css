@@ -1,0 +1,191 @@
+header {
+    background-color: #31599e;
+    top: 0%;
+    min-width: 100%;
+    position: fixed;
+    left: 0%;
+}
+
+footer {
+    bottom: 0%;
+    min-width: 100%;
+    position: fixed;
+    left: 0%;
+    background-color: #9ea2a8;
+    padding: 1%;
+}
+
+#copy-right {
+    font-family: Calibri;
+    margin-left: 0.5%;
+}
+
+/*heading in the header*/
+#movie-cruiser {
+    color: #c4c8cf;
+    margin-left: 1%;
+    position: fixed;
+    top: 1%;
+    font-size: 25px;
+	font-family: Calibri;
+}
+
+/*image in header*/
+#movie-cruiser-img {
+    margin-left: 10%;
+}
+
+/*navigation links in header*/
+nav a {
+    font-size: 17px;
+    margin-left: 92%;
+    top: 1.5%;
+    position: fixed;
+    color: #c4c8cf;
+    font-family: Calibri;
+}
+
+/*favotites link in header*/
+#favorites {
+    margin-left: 96.5%;
+}
+
+/*headings for all pages*/
+#heading {
+    top: 13%;
+    position: fixed;
+    margin-left: 10%;
+    font-size: 30px;
+    font-family: Calibri;
+}
+
+/*tables except form*/
+.table {
+    top: 21%;
+    position: fixed;
+    margin-left: 10%;
+    font-family: Calibri;
+}
+
+/*links in tables*/
+a {
+    color: #000000;
+}
+
+/*edit status*/
+.status {
+    color: #32c937;
+    top: 18%;
+    position: fixed;
+    margin-left: 10%;
+    font-family: Calibri;
+}
+
+/*status customer-notification page*/
+.item-status {
+    color: #32c937;
+    top: 16%;
+    position: fixed;
+    margin-left: 19%;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+/*favorites notification*/
+.favorites-notification {
+    color: #32c937;
+    top: 16%;
+    position: fixed;
+    margin-left: 12.5%;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+/*favorite-empty*/
+#favorites-p {
+    color: #a8a8a8;
+    position: fixed;
+    top: 18%;
+    margin-left: 10%;
+    font-family: Calibri;
+}
+
+/*empty favorite menu-item link*/
+#empty-favorite {
+    color: #1eb5f7;
+}
+
+/*table for form*/
+table {
+    position: fixed;
+    margin-left: 9.8%;
+    top: 20%;
+    font-family: Calibri;
+}
+
+/*no-of-favorites label in favorites page*/
+#no-of-favorites {
+	margin-left: 10.2%;
+	position: fixed;
+	top: 33%;
+	font-family: Calibri;
+}
+
+/*no-of-favorites label in favorites-notification page*/
+#no-of-favorites2 {
+	margin-left: 10.2%;
+	position: fixed;
+	top: 31%;
+	font-family: Calibri;
+}
+
+/*checkbox*/
+#has-teaser {
+    width: 25px;
+    height: 25px;
+}
+
+/*has-teaser label*/
+#has-teaser {
+	position: fixed;
+	top: 34%;
+	font-family: Calibri;
+	color: #787878;
+}
+
+/*form labels*/
+.grey {
+    color: #787878;
+}
+
+/*submit button*/
+#submit {
+    background-color: #31599e;
+    height: 40px;
+    width: 125px;
+    border: none;
+    padding: 5px;
+    font-weight: 10px;
+    color: #ffffff;
+}
+
+/*name text field*/
+#name {
+    width: 440px;
+}
+
+/*box office text field*/
+#box-office {
+    width: 75px;
+}
+
+/*date of launch field*/
+#date-of-launch {
+	width: 125px;
+}
+
+/*radio button*/
+.active {
+	height: 20px;
+	width: 20px;
+}
