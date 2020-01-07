@@ -23,7 +23,6 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
         if (fav == null || fav.getFavoriteList().isEmpty()) {
             throw new FavoriteEmptyException();
         }
-        // List<Movie> favorite = fav.getFavoriteList();
         int total = fav.getFavoriteList().size();
         fav.setTotal(total);
         return fav;
