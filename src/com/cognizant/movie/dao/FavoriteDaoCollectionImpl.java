@@ -19,36 +19,36 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
 
     @Override
     public Favorite getAllFavorites(long userId) throws FavoriteEmptyException {
-        Favorite fav = userFavorite.get(userId);
-        if (fav == null || fav.getFavoriteList().isEmpty()) {
+        Favorite favorite = userFavorite.get(userId);
+        if (favorite == null || favorite.getFavoriteList().isEmpty()) {
             throw new FavoriteEmptyException();
         }
-        int total = fav.getFavoriteList().size();
-        fav.setTotal(total);
-        return fav;
+        int total = favorite.getFavoriteList().size();
+        favorite.setTotal(total);
+        return favorite;
     }
 
     @Override
     public void addFavoritesById(long userId, long movieId) {
-        MovieDao mdao = new MovieDaoCollectionImpl();
-        Movie movie = mdao.getMovieById(movieId);
+        MovieDao moviedao = new MovieDaoCollectionImpl();
+        Movie movie = moviedao.getMovieById(movieId);
         if (userFavorite.containsKey(userId)) {
             userFavorite.get(userId).getFavoriteList().add(movie);
         } else {
-            Favorite fav = new Favorite();
+            Favorite favorite = new Favorite();
             List<Movie> movielist = new ArrayList<Movie>();
             movielist.add(movie);
-            fav.setFavoriteList(movielist);
-            userFavorite.put(userId, fav);
+            favorite.setFavoriteList(movielist);
+            userFavorite.put(userId, favorite);
         }
     }
 
     @Override
     public void removeFavoritesById(long userId, long movieId) {
-        List<Movie> fav = userFavorite.get(userId).getFavoriteList();
-        for (int i = 0; i < fav.size(); i++) {
-            if (fav.get(i).getMovieId() == movieId) {
-                fav.remove(i);
+        List<Movie> favorite = userFavorite.get(userId).getFavoriteList();
+        for (int i = 0; i < favorite.size(); i++) {
+            if (favorite.get(i).getMovieId() == movieId) {
+                favorite.remove(i);
                 break;
             }
         }

@@ -5,7 +5,7 @@ import java.util.List;
 import com.cognizant.movie.model.Movie;
 
 public class FavoriteDaoCollectionImplTest {
-    static FavoriteDao fdao = new FavoriteDaoCollectionImpl();
+    static FavoriteDao favoritedao = new FavoriteDaoCollectionImpl();
 
     public static void main(String[] args) {
         testAddFavorites();
@@ -16,24 +16,24 @@ public class FavoriteDaoCollectionImplTest {
 
     public static void testAddFavorites() {
         System.out.println("Movie added into favorites");
-        fdao.addFavoritesById(1, 2);
-        fdao.addFavoritesById(1, 3);
+        favoritedao.addFavoritesById(1, 2);
+        favoritedao.addFavoritesById(1, 3);
     }
 
     public static void testRemoveFavorites() {
         System.out.println("Remove favorite movie");
-        fdao.removeFavoritesById(1, 2);
+        favoritedao.removeFavoritesById(1, 2);
     }
 
     public static void testGetAllFavorites() {
 
         try {
             System.out.println("Retrieving all the favorites");
-            List<Movie> fav = fdao.getAllFavorites(1).getFavoriteList();
-            for (Movie movie : fav) {
+            List<Movie> favavorite = favoritedao.getAllFavorites(1).getFavoriteList();
+            for (Movie movie : favavorite) {
                 System.out.println(movie);
             }
-            System.out.println("No of favorites : " + fdao.getAllFavorites(1).getTotal());
+            System.out.println("No of favorites : " + favoritedao.getAllFavorites(1).getTotal());
         } catch (FavoriteEmptyException e) {
             System.out.println(e);
         }

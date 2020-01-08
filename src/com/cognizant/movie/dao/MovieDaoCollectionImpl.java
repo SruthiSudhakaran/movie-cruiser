@@ -8,10 +8,10 @@ import com.cognizant.movie.model.Movie;
 import com.cognizant.movie.util.DateUtil;
 
 public class MovieDaoCollectionImpl implements MovieDao {
-    public static List<Movie> movieitemList;
+    public static List<Movie> movieList;
 
     public MovieDaoCollectionImpl() {
-        if (movieitemList == null || movieitemList.isEmpty()) {
+        if (movieList == null || movieList.isEmpty()) {
             Movie movie1 = new Movie(1, "Avatar", 2787965087L, true,
                     DateUtil.convertToDate("15/03/2017"), "Science Fiction", true);
             Movie movie2 = new Movie(2, "The Avengers", 1518812988L, true,
@@ -22,19 +22,19 @@ public class MovieDaoCollectionImpl implements MovieDao {
                     DateUtil.convertToDate("02/07/2017"), "Science Fiction", true);
             Movie movie5 = new Movie(5, "Avengers: End Game", 2750760348L, true,
                     DateUtil.convertToDate("02/11/2022"), "Super Hero", true);
-            movieitemList = new ArrayList<Movie>();
-            movieitemList.add(movie1);
-            movieitemList.add(movie2);
-            movieitemList.add(movie3);
-            movieitemList.add(movie4);
-            movieitemList.add(movie5);
+            movieList = new ArrayList<Movie>();
+            movieList.add(movie1);
+            movieList.add(movie2);
+            movieList.add(movie3);
+            movieList.add(movie4);
+            movieList.add(movie5);
 
         }
     }
 
     @Override
     public Movie getMovieById(long movieId) {
-        for (Movie movie : movieitemList) {
+        for (Movie movie : movieList) {
             if (movie.getMovieId() == movieId) {
                 return movie;
             }
@@ -44,9 +44,9 @@ public class MovieDaoCollectionImpl implements MovieDao {
 
     @Override
     public void modifyMovieList(Movie movieLists) {
-        for (int i = 0; i < movieitemList.size(); i++) {
-            if (movieitemList.get(i).getMovieId() == movieLists.getMovieId()) {
-                movieitemList.set(i, movieLists);
+        for (int i = 0; i < movieList.size(); i++) {
+            if (movieList.get(i).getMovieId() == movieLists.getMovieId()) {
+                movieList.set(i, movieLists);
             }
 
         }
@@ -55,19 +55,19 @@ public class MovieDaoCollectionImpl implements MovieDao {
     @Override
     public List<Movie> getMovieListAdmin() {
 
-        return movieitemList;
+        return movieList;
     }
 
     @Override
     public List<Movie> getMovieListCustomer() {
-        ArrayList<Movie> movieItems = new ArrayList<Movie>();
-        for (Movie movie : movieitemList) {
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        for (Movie movie : movieList) {
             if ((movie.getDateOfLaunch().before(new Date())
                     || movie.getDateOfLaunch().equals(new Date())) && movie.isActive() == true) {
-                movieItems.add(movie);
+                movies.add(movie);
 
             }
         }
-        return movieItems;
+        return movies;
     }
 }
