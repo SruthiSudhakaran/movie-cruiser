@@ -33,7 +33,8 @@
         <c:forEach var="movie" items="${movies}">
             <tr>
                 <td align="left">${movie.getTitle()}</td>
-                <td align="right">${movie.getBoxOffice()}</td>
+                <td align="right"><f:setLocale value="en_US" /> <f:formatNumber
+                        type="currency" value="${movie.getBoxOffice()}"></f:formatNumber></td>
                 <c:choose>
                     <c:when test="${movie.isActive()==true}">
                         <td align="center"><c:out value="Yes"></c:out></td>
