@@ -146,11 +146,11 @@ table {
 }
 
 /*has-teaser label*/
-#has-teaser {
+.has-teaser {
 	position: fixed;
 	top: 34%;
 	font-family: Calibri;
-	color: #787878;
+	color: #c7c7c7;
 }
 
 /*form labels*/

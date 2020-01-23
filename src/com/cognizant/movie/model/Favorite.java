@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Favorite {
     private List<Movie> favoriteList;
-    private int total;
+    private int noOfFavorites;
 
     public Favorite() {
         super();
@@ -13,7 +13,7 @@ public class Favorite {
     public Favorite(List<Movie> favoriteList, int total) {
         super();
         this.favoriteList = favoriteList;
-        this.total = total;
+        this.noOfFavorites = total;
     }
 
     public List<Movie> getFavoriteList() {
@@ -23,18 +23,18 @@ public class Favorite {
     public void setFavoriteList(List<Movie> favoriteList) {
         this.favoriteList = favoriteList;
     }
-
-    public int getTotal() {
-        return total;
+    
+    public int getNoOfFavorites() {
+        return noOfFavorites;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setNoOfFavorites(int noOfFavorites) {
+        this.noOfFavorites = noOfFavorites;
     }
 
     @Override
     public String toString() {
-        return "Favorite [favoriteList=" + favoriteList + ", total=" + total + "]";
+        return "Favorite [favoriteList=" + favoriteList + ", noOfFavorites=" + noOfFavorites + "]";
     }
 
 }

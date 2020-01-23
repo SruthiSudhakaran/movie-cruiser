@@ -24,7 +24,7 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
             throw new FavoriteEmptyException();
         }
         int total = favorite.getFavoriteList().size();
-        favorite.setTotal(total);
+        favorite.setNoOfFavorites(total);
         return favorite;
     }
 

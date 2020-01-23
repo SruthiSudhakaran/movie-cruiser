@@ -1,6 +1,6 @@
-function valid() {
+function validateMovieForm() {
 
-    var name = document.forms["movie-edit"]["title"].value;
+    var name = document.forms["movieForm"]["title"].value;
     var nameRegExp = (/^[a-zA-Z ]{2,100}$/);
     if (name == "") {
         alert("Title is required");
@@ -11,7 +11,7 @@ function valid() {
         return false;
     }
 
-    var gross = document.forms["movie-edit"]["boxOffice"].value;
+    var gross = document.forms["movieForm"]["boxOffice"].value;
     if (gross == "") {
         alert("Box Office is required");
         return false;
@@ -21,13 +21,13 @@ function valid() {
         return false;
     }
 
-    var dateOfLaunch = document.forms["movie-edit"]["dateOfLaunch"].value;
+    var dateOfLaunch = document.forms["movieForm"]["dateOfLaunch"].value;
     if (dateOfLaunch == "") {
         alert("Date of Launch is required");
         return false;
     }
 
-    var genre = document.forms["movie-edit"]["genre"].value;
+    var genre = document.forms["movieForm"]["genre"].value;
     if (genre == "") {
         alert("Select one genre");
         return false;
